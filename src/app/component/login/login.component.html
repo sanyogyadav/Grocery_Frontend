@@ -1,0 +1,22 @@
+<div class="parent" fxLayout="column" fxLayoutAlign="space-around center">
+    <div class="child" fxLayout="column" fxLayoutAlign="space-around center">
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="login_form">
+            <h2>Login</h2>
+            <!-- Username Field -->
+            <mat-form-field class="login_style" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput #uname formControlName="username" placeholder="Ex. Samuel">
+                <mat-hint align="end">{{uname.value.length}}/15</mat-hint>
+                <mat-error>Enter username <strong>required*</strong></mat-error>
+            </mat-form-field>
+            <!-- Password Field -->
+            <mat-form-field class="login_style" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" placeholder="Ex. combination of characters S@mue!">
+                <mat-error>Enter password <strong>required*</strong></mat-error>
+            </mat-form-field>
+            
+            <button mat-raised-button color="primary" class="button" type="submit" routerLink="/">Create Account</button>
+        </form>
+    </div>
+</div>

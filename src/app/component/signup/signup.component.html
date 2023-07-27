@@ -1,0 +1,47 @@
+<div class="parent" fxLayout="column" fxLayoutAlign="space-around center">
+    <div class="child" fxLayout="column" fxLayoutAlign="space-around center">
+        <form [formGroup]="signupForm" (ngSubmit)="signup()" class="signup_form">
+            <h2>Sign Up</h2>
+            <!-- Username Field -->
+            <mat-form-field class="signup_style" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput #uname formControlName="username" placeholder="Ex. Samuel">
+                <mat-hint align="end">{{uname.value.length}}/15</mat-hint>
+                <mat-error>Enter username <strong>required*</strong></mat-error>
+            </mat-form-field>
+            <!-- Email Field -->
+            <mat-form-field class="signup_style" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Ex. sam@example.com">
+                <mat-error>Enter emailid <strong>required*</strong></mat-error>
+            </mat-form-field>
+            <!-- Address Field -->
+            <mat-form-field class="signup_style" appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput #address maxlength="150" formControlName="address" placeholder="Ex. santosh nagar, goregaon(east), mumbai">
+                <mat-hint align="end">{{address.value.length}} / 150</mat-hint>
+            </mat-form-field>
+            <!-- Pincode Field -->
+            <mat-form-field class="signup_style" appearance="outline">
+                <mat-label>Pincode</mat-label>
+                <input matInput #pincode maxlength="12" formControlName="pincode" placeholder="Ex. 400065">
+                <mat-hint align="end">{{pincode.value.length}} / 12</mat-hint>
+            </mat-form-field>
+            <!-- Password Field -->
+            <mat-form-field class="signup_style" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" placeholder="Ex. combination of characters S@mue!">
+                <mat-error>Enter password <strong>required*</strong></mat-error>
+            </mat-form-field>
+            <mat-form-field class="signup_style" appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input type="password" matInput formControlName="cPassword" placeholder="must be same as password">
+                <mat-error>Confirm Password <strong>required*</strong></mat-error>
+            </mat-form-field>
+
+            <mat-checkbox class="checkbox">I agree to the terms & conditions</mat-checkbox>
+
+            <button mat-raised-button color="primary" class="button" type="submit" routerLink="/">Create Account</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.child1 {
+    padding-top: 10px;
+}
+
+img {
+    height: 480px;
+}
+
+.grand-parent {
+    background-color: whitesmoke;
+}
+
+.child2 .child3 {
+    max-width: max-content;
+    max-height: max-content;
+    margin-top: 5px;
+    display: flex;
+}
+
+.card {
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 250px;
+    height: 400px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+}
+
+.card-img-top {
+    border-radius: 71% 29% 26% 74% / 64% 52% 48% 36% 
+}

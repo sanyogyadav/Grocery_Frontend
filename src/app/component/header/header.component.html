@@ -1,0 +1,94 @@
+<nav class="header navbar-light" style="background-color: #e3f2fd;">
+    <h2 class="title">
+        𝓢𝓶𝓲𝓵𝓮 𝓜𝓪𝓻𝓽 
+    </h2>
+
+    <button mat-button [matMenuTriggerFor]="Grocery">Browse Category</button>
+    <mat-menu #Grocery="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="BabyCare">Baby Care</button>
+        <button mat-menu-item [matMenuTriggerFor]="FreshFruits">Vegetables & Fruits</button>
+        <button mat-menu-item [matMenuTriggerFor]="Drinks">Cold Drinks & Juices</button>
+        <button mat-menu-item [matMenuTriggerFor]="Bakery">Bakery & Biscuits</button>
+        <button mat-menu-item [matMenuTriggerFor]="InstantFrozen">Instant & Frozen Food</button>
+    </mat-menu>
+    <mat-menu #BabyCare="matMenu">
+        <button mat-menu-item>Diapering</button>
+        <button mat-menu-item>Bathing Needs</button>
+        <button mat-menu-item>Baby Wipes</button>
+        <button mat-menu-item>Baby Food</button>
+        <button mat-menu-item>Skin & Hair Care</button>
+        <button mat-menu-item>Feeding</button>
+        <button mat-menu-item>Oral & Nasal Care</button>
+        <button mat-menu-item>Hygiene</button>
+    </mat-menu>
+    <mat-menu #FreshFruits="matMenu">
+        <button mat-menu-item>Fresh Vegetables</button>
+        <button mat-menu-item>Fresh Fruits</button>
+        <button mat-menu-item>Exotics</button>
+        <button mat-menu-item>Leafies & Herbs</button>
+        <button mat-menu-item>Certified Organic</button>
+        <button mat-menu-item>Hydroponic</button>
+        <button mat-menu-item>Flowers & Leaves</button>
+    </mat-menu>
+    <mat-menu #Drinks="matMenu">
+        <button mat-menu-item>Soft Drinks</button>
+        <button mat-menu-item>Fruit Juices</button>
+        <button mat-menu-item>Mango Drinks</button>
+        <button mat-menu-item>100% Juices</button>
+        <button mat-menu-item>Herbal Drinks</button>
+        <button mat-menu-item>Milk Drinks</button>
+        <button mat-menu-item>Cold Coffee & Ice Tea</button>
+    </mat-menu>
+    <mat-menu #Bakery="matMenu">
+        <button mat-menu-item>Bread & Pav</button>
+        <button mat-menu-item>Cookies</button>
+        <button mat-menu-item>Cream Biscuits</button>
+        <button mat-menu-item>Cakes & Rolls</button>
+        <button mat-menu-item>Healthy & Digestive</button>
+        <button mat-menu-item>Glucose & Marie</button>
+        <button mat-menu-item>Gourmet Bakery</button>
+    </mat-menu>
+    <mat-menu #InstantFrozen="matMenu">
+        <button mat-menu-item>Noodles</button>
+        <button mat-menu-item>Pasta</button>
+        <button mat-menu-item>Soup</button>
+        <button mat-menu-item>Cakes & Rolls</button>
+        <button mat-menu-item>Healthy & Digestive</button>
+        <button mat-menu-item>Glucose & Marie</button>
+        <button mat-menu-item>Gourmet Bakery</button>
+    </mat-menu>
+
+    <form class="search-form">
+        <mat-form-field class="input-search">
+            <mat-label>Search</mat-label>
+            <input type="text" matInput placeholder="search something">
+        </mat-form-field>
+        <button class="btn btn-primary search-button" type="submit">Search</button>
+    </form>
+   
+    <ul>
+        <li>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="menu_icon">account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" yPosition="below">
+                <button mat-menu-item>
+                    <mat-icon class="dropdown_icon">login</mat-icon>
+                    <span class="menu_dropdown" routerLink="/user_login">Login</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon class="dropdown_icon">logout</mat-icon>
+                    <span class="menu_dropdown" routerLink="user_signup">Sign up</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon class="dropdown_icon">shopping_cart</mat-icon>
+                    <span class="menu_dropdown">Cart</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon class="dropdown_icon">favorite_border</mat-icon>
+                    <span class="menu_dropdown">Wishlist</span>
+                </button>    
+            </mat-menu>
+        </li>
+    </ul>
+</nav>

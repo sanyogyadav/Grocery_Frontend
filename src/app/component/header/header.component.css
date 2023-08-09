@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.header ul {
+    list-style-type: none;
+    margin-right: 10px;
+    padding-right: 5px;
+    font-size: 30px;
+}
+
+h2 {
+    color: #05386b;
+}
+
+.title {
+    align-self: center;
+    font-family: 'Dancing Script', cursive;
+	font-size: 30px;
+    margin-left: 10px;
+    color: black;
+    position: relative;
+    animation-name: title;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes title {
+    0% {color: green; left:0px; right: 50px;}
+    25% {color: violet; left:50px; right: 50px;}
+    50% {color: blue; left:100px; right: 0px;}
+    75% {color: red; left: 50px; right: 50px;}
+    100% {color: black; left: 0px; right: 100px;}
+}
+
+.menu_icon {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+}
+
+.menu_dropdown {
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dropdown_icon {
+    font-weight: bolder;
+}
+.search-form {
+    margin-top: 10px;
+}
+
+.input-search {
+    margin-right: 10px;
+}
